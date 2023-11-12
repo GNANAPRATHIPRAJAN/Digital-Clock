@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time</title>
+    <meta name="GNANAPRATHIPRAJAN" title="Global Time">
+    <style>
+        .wrapper{
+            background: rgb(131,58,180);
+            background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 52%, rgba(252,176,69,1) 100%);
+            margin: auto;
+            padding: 30px 30px;
+            text-align: center;
+            border-radius: 40px;
+            border-color: black;
+            
+        }
+        .time{
+            width: 20.5rem;
+            border: 2px solid white;
+            border-radius: 30px;
+            padding: 20px 20px;
+            font-size: 40px;
+            font-weight: bolder;
+            text-align: center;
+            margin: auto;
+            color: white;
+
+        }
+        main{
+            background: rgb(131,58,180);
+            background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(40,39,43,1) 52%, rgba(252,176,69,1) 100%);
+            margin: 0px 0px;
+            padding: 0px 0px;
+        }
+        .time:hover{
+          background-color: yellow;
+          transform: translateY(-10px);
+          color: black;
+          box-shadow: 0 0 5px yellow,0 0 25px yellow, 0 0 50px yellow,
+            0 0 75px yellow,0 0 100px yellow;
+        }
+        h2:hover{
+          color: gold;
+          font-weight: bolder;
+          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+    </style>
+</head>
+<main>
+        <div class="wrapper">
+             <h2>Australia</h2>
+            <div class="time">
+              <span id="hra">00</span>
+              <span>:</span>
+              <span id="mina">00</span>
+              <span>:</span>
+              <span id="seca">00</span>
+            </div>
+        </div><br>
+        <div class="wrapper">
+            <h2>Japan</h2>
+           <div class="time">
+             <span id="hrj">00</span>
+             <span>:</span>
+             <span id="minj">00</span>
+             <span>:</span>
+             <span id="secj">00</span>
+           </div>
+       </div><br>
+       <div class="wrapper">
+          <h2>Norway</h2>
+         <div class="time">
+            <span id="hrn">00</span>
+            <span>:</span>
+            <span id="minn">00</span>
+            <span>:</span>
+            <span id="secn">00</span>
+         </div>
+       </div><br>
+       <div class="wrapper">
+        <h2>Brazil</h2>
+       <div class="time">
+          <span id="hrb">00</span>
+          <span>:</span>
+          <span id="minb">00</span>
+          <span>:</span>
+          <span id="secb">00</span>
+       </div>
+     </div>
+</main>
+<script>
+       function DisplayTime(){let nd= new Date()
+        let hr=nd.getHours()+5;
+        let min=nd.getMinutes()-30;
+        let sec=nd.getSeconds();
+        var atm=nd.setHours(hr);
+        var atm=nd.setMinutes(min);
+        var Australia=new Date(atm)
+        var da1=String(Australia.getHours());
+        var da2=String(Australia.getMinutes());
+        var da3=String(Australia.getSeconds());
+        document.getElementById('hra').innerHTML=da1
+        document.getElementById('mina').innerHTML=da2
+        document.getElementById('seca').innerHTML=da3
+        } 
+      setInterval(DisplayTime,500)
+
+      function DisplayTimej(){let ndj= new Date()
+        let hr=ndj.getHours()+4;
+        let min=ndj.getMinutes()-30;
+        let sec=ndj.getSeconds();
+        var atm1=ndj.setHours(hr);
+        var atm1=ndj.setMinutes(min);
+        var japan=new Date(atm1)
+        var dj1=String(japan.getHours());
+        var dj2=String(japan.getMinutes());
+        var dj3=String(japan.getSeconds());
+        document.getElementById('hrj').innerHTML=dj1
+        document.getElementById('minj').innerHTML=dj2
+        document.getElementById('secj').innerHTML=dj3
+        } 
+      setInterval(DisplayTimej,500)
+
+      function DisplayTimen(){let ndn= new Date()
+        let hr=ndn.getHours()-3;
+        let min=ndn.getMinutes()-30;
+        let sec=ndn.getSeconds();
+        var atm2=ndn.setHours(hr);
+        var atm2=ndn.setMinutes(min);
+        var Norway=new Date(atm2)
+        var dn1=String(Norway.getHours());
+        var dn2=String(Norway.getMinutes());
+        var dn3=String(Norway.getSeconds());
+        document.getElementById('hrn').innerHTML=dn1
+        document.getElementById('minn').innerHTML=dn2
+        document.getElementById('secn').innerHTML=dn3
+        } 
+      setInterval(DisplayTimen,500)
+
+      function DisplayTimeb(){let ndb= new Date()
+        let hr=ndb.getHours()-8;
+        let min=ndb.getMinutes()-30;
+        let sec=ndb.getSeconds();
+        var atm0=ndb.setHours(hr);
+        var atm0=ndb.setMinutes(min);
+        var Brazil=new Date(atm0)
+        var db1=String(Brazil.getHours());
+        var db2=String(Brazil.getMinutes());
+        var db3=String(Brazil.getSeconds());
+        document.getElementById('hrb').innerHTML=db1
+        document.getElementById('minb').innerHTML=db2
+        document.getElementById('secb').innerHTML=db3
+        } 
+      setInterval(DisplayTimeb,500)
+</script>
+<body>
+   
+</body>
+</html>
